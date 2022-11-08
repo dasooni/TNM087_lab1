@@ -9,7 +9,7 @@ function [RGB_Range, IR_Select] = LevelSlicing( RGB_Image, IR_Image, LevelRange)
 %
 %% Who has done it
 %
-% Authors: Same LiU-IDs/names, as in the Lisam submission
+% Authors: dasse788 & isagr142
 % You can work in groups of max 2 students
 %
 %% Syntax of the function
