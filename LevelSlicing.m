@@ -9,7 +9,7 @@ function [RGB_Range, IR_Select] = LevelSlicing( RGB_Image, IR_Image, LevelRange)
 %
 %% Who has done it
 %
-% Authors: dasse788 & isagr142
+% Authors: Same LiU-IDs/names, as in the Lisam submission
 % You can work in groups of max 2 students
 %
 %% Syntax of the function
@@ -65,7 +65,12 @@ set(fh1,'NumberTitle','off','Name','Select a pixel for reference intensity level
 % Based on the coordinates of the selected pixel (expressed in x,y )
 % find the selected intensity level. Then compute the selected intensity range,
 % based on the vaiable LevelRange
+
+IR_Image = im2double(IR_Image);
+RGB_Image = im2double(RGB_Image);
+ %rounding to avoid non-integer index exception
 y = round(y);
+x = round(x);
 Lower = IR_Image(x,y) - ((LevelRange/2) / 100); % The lowest intensity value in the selected range
 Higher = IR_Image(x,y) + (LevelRange/2) / 100; % The highest intensity value in the selected range
     
